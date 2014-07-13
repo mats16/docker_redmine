@@ -21,7 +21,8 @@ RUN /etc/init.d/mysqld start && \
     mysql -u root -proot -e "DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1');" && \
     mysql -u root -proot -e "DROP DATABASE test;" && \
     mysql -u root -proot -e "DELETE FROM mysql.db WHERE Db='test' OR Db='test\\_%';" && \
-    mysql -u root -proot -e "GRANT ALL PRIVILEGES ON *.* TO root@'%' IDENTIFIED BY 'root' WITH GRANT OPTION;" && \
+    mysql -u root -proot -e "CREATE DATABASE redmine DEFAULT CHARACTER SET utf8;" && \
+    mysql -u root -proot -e "GRANT ALL PRIVILEGES ON redmine.* TO redmine@'%' IDENTIFIED BY 'redmine' WITH GRANT OPTION;" && \
     mysql -u root -proot -e "FLUSH PRIVILEGES;" && \
     /etc/init.d/mysqld stop
 
