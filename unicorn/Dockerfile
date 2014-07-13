@@ -39,6 +39,7 @@ ADD redmine/configuration.yml ${REDMINE_HOME}/config/configuration.yml
 ADD redmine/unicorn.rb ${REDMINE_HOME}/config/unicorn.rb
 ADD redmine/Gemfile.local ${REDMINE_HOME}/Gemfile.local
 
+EXPOSE 8080
 WORKDIR /var/redmine
 RUN bundle install --without development test
 CMD bundle exec unicorn -c config/unicorn.rb -E ${RAILS_ENV} -p ${UNICORN_PORT}
