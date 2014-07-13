@@ -1,6 +1,6 @@
-## redmine_nginx Dockerfile
+## MySQL Container
 
-The dockerfile create mysql container for redmine
+The dockerfile builds mysql image
 
 ![docker_redmine_mysql](http://docs.google.com/drawings/d/1F3-zeak2eGoE5jzqtyI5TbZZBEhYldb_pQd4dkX5zVE/pub?w=960&h=720)
 

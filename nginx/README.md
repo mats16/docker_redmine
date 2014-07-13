@@ -1,6 +1,6 @@
-## redmine_nginx Dockerfile
+## Nginx Container
 
-The dockerfile create nginx container for redmine
+The dockerfile builds nginx image
 
 ![docker_redmine_nginx](https://docs.google.com/drawings/d/1rcVPHYIk-Ntphe7NM07FUNOR65qcNOqOvoMJ_rh1qD4/pub?w=960&h=720)
 
