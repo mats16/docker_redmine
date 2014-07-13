@@ -41,5 +41,7 @@ ADD redmine/Gemfile.local ${REDMINE_HOME}/Gemfile.local
 
 EXPOSE 8080
 WORKDIR /var/redmine
-RUN bundle install --without development test
-CMD bundle exec unicorn -c config/unicorn.rb -E ${RAILS_ENV} -p ${UNICORN_PORT}
+CMD bundle install --without development test && \
+    bundle exec rake generate_secret_token && \
+    bundle exec rake db:migrate RAILS_ENV=${RAILS_ENV} && \
+    bundle exec unicorn -c config/unicorn.rb -E ${RAILS_ENV} -p 8080
