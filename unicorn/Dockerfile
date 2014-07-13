@@ -14,6 +14,7 @@ RUN rpm -ivh http://ftp.riken.jp/Linux/fedora/epel/6/x86_64/epel-release-6-8.noa
 RUN yum -y update
 RUN yum -y groupinstall "Development Tools"
 RUN yum -y install --enablerepo=centosplus openssl-devel
+RUN yum -y install --enablerepo=remi mysql-devel mysql
 RUN yum -y install git \
                    readline-devel \
                    zlib-devel curl-devel \
