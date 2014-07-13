@@ -26,4 +26,4 @@ RUN /etc/init.d/mysqld start && \
     /etc/init.d/mysqld stop
 
 EXPOSE 3306
-CMD /usr/bin/mysqld_safe
+CMD ["/usr/bin/mysqld_safe"]
