@@ -6,3 +6,9 @@ The dockerfile builds mysql image
 
 - `CentOS` 6.5
 - `mysql` 5.5
+
+### Usage
+
+```bash
+$ docker run -d mattuso/redmine_mysql
+```

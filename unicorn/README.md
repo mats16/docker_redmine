@@ -7,3 +7,9 @@ The dockerfile builds unicorn image (rails & redmine)
 - `CentOS` 6.5
 - `ruby` 2.1.0
 - `Redmine` 2.5-stable
+
+### Usage
+
+```bash
+$ docker run -d --link <CONTAINER_NAME>:db mattuso/redmine_unicorn
+```
