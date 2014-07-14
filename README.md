@@ -7,5 +7,5 @@
 ```bash
 $ docker run -d --name <DB_CONTAINER> mattuso/redmine_mysql
 $ docker run -d --name <APP_CONTAINER> --link <DB_CONTAINER>:db mattuso/redmine_unicorn
-$ docker run -d --name <WEB_CONTAINER> --link <APP_CONTAINER>:app mattuso/redmine_nginx
+$ docker run -d --name <WEB_CONTAINER> --link <APP_CONTAINER>:app -p 80:80 mattuso/redmine_nginx
 ```
