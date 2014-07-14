@@ -10,5 +10,5 @@ The dockerfile builds mysql image
 ### Usage
 
 ```bash
-$ docker run -d mattuso/redmine_mysql
+$ docker run -d --name <DB_CONTAINER> mattuso/redmine_mysql
 ```

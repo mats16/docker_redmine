@@ -8,5 +8,5 @@ The dockerfile builds nginx image
 - `nginx` 
 
 ```bash
-$ docker run -d --link <CONTAINER_NAME>:app mattuso/redmine_nginx
+$ docker run -d --name <WEB_CONTAINER> --link <APP_CONTAINER>:app mattuso/redmine_nginx
 ```
