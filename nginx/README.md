@@ -7,6 +7,8 @@ The dockerfile builds nginx image
 - `CentOS` 6.5
 - `nginx` 
 
+### Usage
+
 ```bash
 $ docker run -d --name <WEB_CONTAINER> --link <APP_CONTAINER>:app -p 80:80 mattuso/redmine_nginx
 ```
