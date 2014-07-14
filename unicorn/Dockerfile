@@ -38,6 +38,7 @@ ADD redmine/database.yml ${REDMINE_HOME}/config/database.yml
 ADD redmine/configuration.yml ${REDMINE_HOME}/config/configuration.yml
 ADD redmine/unicorn.rb ${REDMINE_HOME}/config/unicorn.rb
 ADD redmine/Gemfile.local ${REDMINE_HOME}/Gemfile.local
+RUN mkdir ${REDMINE_HOME}/public/plugin_assets
 
 EXPOSE 8080
 WORKDIR /var/redmine
