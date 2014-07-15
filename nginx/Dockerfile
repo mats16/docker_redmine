@@ -3,12 +3,11 @@
 FROM centos:centos6
 
 ## add repository
-RUN rpm -ivh http://ftp.riken.jp/Linux/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm \
-             http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+RUN rpm -ivh http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm
 
 RUN yum -y update
 RUN yum -y install --enablerepo=centosplus openssl-devel
-RUN yum -y install --enablerepo=remi nginx
+RUN yum -y install --enablerepo=nginx nginx
 
 ADD etc/nginx/nginx.conf /etc/nginx/nginx.conf
 ADD etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
