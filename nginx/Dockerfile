@@ -7,8 +7,9 @@ RUN rpm -ivh http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos
 
 RUN yum -y update
 RUN yum -y install --enablerepo=centosplus openssl-devel
-RUN yum -y install --enablerepo=nginx nginx
 
+# install Nginx
+RUN yum -y install --enablerepo=nginx nginx
 ADD etc/nginx/nginx.conf /etc/nginx/nginx.conf
 ADD etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
 
