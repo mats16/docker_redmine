@@ -10,8 +10,7 @@ RUN yum -y install --enablerepo=centosplus openssl-devel
 
 # install Nginx
 RUN yum -y install --enablerepo=nginx nginx
-ADD etc/nginx/nginx.conf /etc/nginx/nginx.conf
-ADD etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
+ADD redmine.conf /etc/nginx/conf.d/redmine.conf
 
 EXPOSE 80
 CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
