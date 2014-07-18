@@ -45,4 +45,4 @@ WORKDIR /var/redmine
 CMD bundle install --without development test && \
     bundle exec rake generate_secret_token && \
     bundle exec rake db:migrate RAILS_ENV=${RAILS_ENV} && \
-    bundle exec unicorn -c config/unicorn.rb -E ${RAILS_ENV} -p 80
+    bundle exec unicorn -c config/unicorn.rb -E ${RAILS_ENV} -p 8080
