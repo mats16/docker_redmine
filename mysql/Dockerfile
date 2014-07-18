@@ -11,7 +11,7 @@ RUN yum -y install --enablerepo=centosplus openssl-devel
 
 # install MySQL
 RUN yum -y install --enablerepo=remi mysql-server mysql-devel mysql
-ADD etc/my.cnf /etc/my.cnf
+ADD my.cnf /etc/my.cnf
 RUN mysql_install_db
 
 # alternative to　"mysql_secure_installation"
